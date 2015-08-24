@@ -1,0 +1,31 @@
+{
+  "name": "vue-resettable",
+  "version": "0.0.1",
+  "description": "resettable component for vue.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satetsu888/vue-resettable.git"
+  },
+  "keywords": [
+    "vue",
+    "resettable"
+  ],
+  "author": "satetsu888",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/satetsu888/vue-resettable/issues"
+  },
+  "homepage": "https://github.com/satetsu888/vue-resettable#readme",
+  "dependencies": {
+    "css-loader": "^0.16.0",
+    "html-loader": "^0.3.0",
+    "style-loader": "^0.12.3",
+    "vue": "^0.12.10",
+    "vue-loader": "^3.0.3",
+    "webpack": "^1.11.0"
+  }
+}
