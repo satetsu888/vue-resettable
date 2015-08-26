@@ -11,15 +11,10 @@ module.exports = {
         
         delete initialData["base"];
         delete initialData["current"];
-        this.setAsBase(initialData);
-    },
-    computed: {
-        changed: function(){
-            return JSON.stringify(this.base) !== JSON.stringify(this.current) ? true : false;
-        }
+        this.update(initialData);
     },
     methods: {
-        setAsBase: function(newBaseData){
+        update: function(newBaseData){
             var self = this;
             var baseData = newBaseData ? newBaseData : self.current;
 
@@ -39,6 +34,13 @@ module.exports = {
             Object.keys(self.base).forEach(function(key){
                 self.$data[key] = self.base[key];
             });
+        },
+        changed: function(paramName){
+            if(paramName){
+                return JSON.stringify(this.base[paramName]) !== JSON.stringify(this.current[paramName]) ? true : false;
+            } else {
+                return JSON.stringify(this.base) !== JSON.stringify(this.current) ? true : false;
+            }
         }
     },
     replase: true
