@@ -2,6 +2,8 @@
 
 [![npm version](https://badge.fury.io/js/vue-resettable.svg)](http://badge.fury.io/js/vue-resettable)
 
+[![Build Status](https://travis-ci.org/satetsu888/vue-resettable.svg?branch=master)](https://travis-ci.org/satetsu888/vue-resettable)
+
 Vue.js component to provide resettable VM.
 
 ## Install
