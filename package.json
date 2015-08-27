@@ -4,7 +4,8 @@
   "description": "resettable component for vue.js",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
