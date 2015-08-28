@@ -12,23 +12,20 @@ Vue.js component to provide resettable VM.
 
 ## How to Use
 
-Mixin to your component, then you can use below function in your component.
+Mixin to your component, then you can use below methods in your component.
 
-### methods
+### Methods
 
 - reset() - reset $data
-- update() - set current value as default
+- update() - set current value as default(and you can reset $data to that)
 - getBase([paramName]) - get default $data.[paramName]
-- changed([paramName]) - check $data.[paramName] has changed
+- changed([paramName]) - check $data.[paramName] has changed from default
 
 ## Sample Code
 
 ```
 <div id="app">
-    <color-component color="#aabbcc"></color-component>
-</div>
-
-<script type="x-template" id="color-component">
+    <color-component color="#aabbcc">
     <div>
         <p style="background-color:{{getBase('color')}}">baseData:{{getBase('color')}}</p>
         <p style="background-color:{{color}}">currentData:{{color}}</p>
@@ -37,13 +34,14 @@ Mixin to your component, then you can use below function in your component.
         <input type=button value="Reset" v-on="click: reset">
         <input type=button value="Update"v-on="click: update()">
     </div>
-</script>
+    </color-component>
+</div>
+
 
 <script>
     var resettable = require('vue-resettable');
     var colorComponent = Vue.extend({
         props: ["color"],
-        template: "#color-component",
         mixins: [resettable]
     });
 
