@@ -15,8 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'dest/*.js',
-      'spec/*.js',
+      'spec/*.js'
     ],
 
 
@@ -28,17 +27,10 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      '*.vue' : ['webpack']
+      'spec/*.js' : ['webpack']
     },
 
     webpack: {
-        entry: "./index.js",
-        output: {
-            path: "./dest",
-            filename: "vue-resettable.js",
-            library: "resettable",
-            libraryTarget: "umd"
-        },
         module: {
             loaders: [
                 { test: /\.vue$/, loader: 'vue' },
