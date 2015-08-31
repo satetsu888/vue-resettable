@@ -23,6 +23,10 @@ module.exports = {
             });
             this.resettable_base = JSON.parse(JSON.stringify(baseData));
 
+            Object.getOwnPropertyNames(self.$options.computed).forEach(function(n){
+                self.resettable_base[n] = self[n];
+            });
+
             self.reset();
         },
         getBase: function(paramName){
