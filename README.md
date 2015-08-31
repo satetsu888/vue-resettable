@@ -16,10 +16,10 @@ Mixin to your component, then you can use below methods in your component.
 
 ### Methods
 
-- reset() - reset $data
-- update() - set current value as default(and you can reset $data to that)
-- getBase([paramName]) - get default $data.[paramName]
-- changed([paramName]) - check $data.[paramName] has changed from default
+- reset() - reset $data to default.
+- update() - set current value as default(and you can reset $data to that).
+- getBase([propertyName]) - get default $data.[propertyName]. this will work with computed properties also.
+- changed([propertyName]) - check $data.[propertyName] has changed from default
 
 ## Sample Code
 
